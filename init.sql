@@ -36,7 +36,7 @@ INSERT INTO users (name, email, password)
 
 INSERT INTO lists (name, description, user_id)
     VALUES ('Lista de Prueba', 'Esta es  una lista musical de prueba', (select id from users where email = 'ca@test.com')),
-    ('Lista Musical', 'Lista variadita de canciones en ingles par abuen mood', (select id from users where email = 'ca@test.com')),
+    ('Lista con Canciones', 'Lista variadita de canciones en ingles para buen mood', (select id from users where email = 'ca@test.com')),
     ('Clasicos del Rock', 'Esta lista esta vacia', (select id from users where email = 'ca@test.com')),
     ('Tranquilitas', 'Esta lista tambien esta vacia', (select id from users where email = 'user@test.com')),
     ('Cafe y Libros', 'Esta lista esta vacia', (select id from users where email = 'user@test.com'));
@@ -49,4 +49,4 @@ INSERT INTO songs (name, artist, album, url, image)
     ('The Scientist', 'Coldplay', 'A rush of blood to head', 'https://www.youtube.com/watch?v=RB-RcX5DS5A' , 'http://3.bp.blogspot.com/-bMIu24j5gGQ/VOQKs3opAeI/AAAAAAAAAjc/Y7a6e9BAZwI/s1600/A%2Brush%2Bof%2Bblood%2Bto%2Bthe%2Bhead.jpg');
 
 INSERT INTO listsongs (list_id, song_id)
-    VALUES (2, 1),(2, 2),(2, 3),(2, 4),(2, 5), (2, 1);
+    VALUES (2, 1),(2, 2),(2, 3),(2, 4),(2, 5), (1, 2);
