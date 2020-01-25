@@ -18,6 +18,7 @@ app.use(express.urlencoded({extended: false}));
 //routes
 app.use(require('./src/routes/index'));
 
-const port_number = server.listen(process.env.PORT || 3000);
-app.listen(port_number);
-console.log("Server on port 3000");
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log(`Our app is running on port ${ PORT }`);
+});
